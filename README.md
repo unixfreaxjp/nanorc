@@ -7,7 +7,7 @@ mkdir /usr/local/share/nano
 
 Using nano, make a nano resource file for your C syntax like this:
 ```
-nano /usr/local/share/nano/c.nanorc`
+nano /usr/local/share/nano/c.nanorc
 ```
 
 Now put i.e. your C code highlighting in this file and save it. Here is a link to some possible C syntax highlighting:
