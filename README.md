@@ -1,4 +1,4 @@
-# nanosyntax
+# nanorc
 
 Create a new directory in /usr/local/share/ called 'nano' like this:
 ```
