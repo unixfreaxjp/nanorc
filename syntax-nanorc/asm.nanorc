@@ -2,11 +2,14 @@
 ##
 syntax "asm" "\.(S|s|asm)$"
 color red "\<[A-Z_]{2,}\>"
-color brightgreen "\.(data|subsection|text)"
+color brightcyan "\.(data|subsection|text)"
 color green "\.(align|file|globl|global|hidden|section|size|type|weak)"
 color brightyellow "\.(ascii|asciz|byte|double|float|hword|int|long|short|single|struct|word)"
 icolor brightred "^[[:space:]]*[.0-9A-Z_]*:"
 color brightcyan "^[[:space:]]*#[[:space:]]*(define|undef|include|ifn?def|endif|elif|else|if|warning|error)"
+## Highlights assembly syntax unixfreaxjp
+color brightyellow "\<(call|lea|ref|xref|mov|sub|pop|popad|popal|ret|add|sub|cld|xor|and|ror|jmp|jz|jze|jne|jump)\>"
+color brightcyan "\<(edi|esi|eax|ebx|ecx|edx|ebp|eip|esp|ax|al|cx|dx|rsi|rdi|rax|rbx|rcx|rdx|rbp|rip|rsp)\>"
 ## Highlight strings (note: VERY resource intensive)
 color brightyellow "<[^= 	]*>" ""(\\.|[^"])*""
 color brightyellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
@@ -15,10 +18,10 @@ color brightblue "//.*"
 color brightblue start="/\*" end="\*/"
 ## Highlight trailing whitespace
 color ,blue "[[:space:]]+$"
-# Unix Commands
+# Unix commands unixfreaxjp
 color red "\<(arch|awk|bash|bunzip2|bzcat|bzcmp|bzdiff|bzegrep|bzfgrep|bzgrep|bzip2|bzip2recover|bzless|bzmore|cat|chattr|chgrp|chmod|chown|chvt|cp|date|dd|deallocvt|df|dir|dircolors|dmesg|dnsdomainname|domainname|du|dumpkeys|echo|ed|egrep|false|fgconsole|fgrep|fuser|gawk|getkeycodes|gocr|grep|groups|gunzip|gzexe|gzip|hostname|igawk|install|kbd_mode|kbdrate|killall|last|lastb|link|ln|loadkeys|loadunimap|login|ls|lsattr|lsmod|lsmod.old|mapscrn|mesg|mkdir|mkfifo|mknod|mktemp|more|mount|mv|nano|netstat|nisdomainname|openvt|pgawk|pidof|ping|ps|pstree|pwd|rbash|readlink|red|resizecons|rm|rmdir|run-parts|sash|sed|setfont|setkeycodes|setleds|setmetamode|setserial|sh|showkey|shred|sleep|ssed|stat|stty|su|sync|tar|tempfile|touch|true|umount|uname|unicode_start|unicode_stop|unlink|utmpdump|uuidgen|vdir|wall|wc|ypdomainname|zcat|zcmp|zdiff|zegrep|zfgrep|zforce|zgrep|zless|zmore|znew|zsh)\>"
 color red "\<(aclocal|aconnect|aplay|apm|apmsleep|apropos|ar|arecord|as|as86|autoconf|autoheader|automake|awk|basename|bc|bison|c++|cal|cat|cc|cdda2wav|cdparanoia|cdrdao|cd-read|cdrecord|chfn|chgrp|chmod|chown|chroot|chsh|clear|cmp|co|col|comm|cp|cpio|cpp|cut|dc|dd|df|diff|diff3|dir|dircolors|directomatic|dirname|du|env|expr|fbset|file|find|flex|flex++|fmt|free|ftp|funzip|fuser|g++|gawk|gc|gcc|gdb|getent|getopt|gettext|gettextize|gimp|gimp-remote|gimptool|gmake|gs|head|hexdump|id|install|join|kill|killall|ld|ld86|ldd|less|lex|ln|locate|lockfile|logname|lp|lpr|ls|lynx|m4|make|man|mkdir|mknod|msgfmt|mv|namei|nasm|nawk|nice|nl|nm|nm86|nmap|nohup|nop|od|passwd|patch|pcregrep|pcretest|perl|perror|pidof|pr|printf|procmail|prune|ps2ascii|ps2epsi|ps2frag|ps2pdf|ps2ps|psbook|psmerge|psnup|psresize|psselect|pstops|rcs|rev|rm|scp|sed|seq|setterm|shred|size|size86|skill|slogin|snice|sort|sox|split|ssh|ssh-add|ssh-agent|ssh-keygen|ssh-keyscan|stat|strings|strip|sudo|suidperl|sum|tac|tail|tee|test|tr|uniq|unlink|unzip|updatedb|updmap|uptime|users|vmstat|w|wc|wget|whatis|whereis|which|who|whoami|write|xargs|yacc|yes|zip|zsoelim)\>"
-# C commands
+# C commands unixfreaxjp
 color brightyellow "\<(for|while|do|else|case|default|switch)\>"
 color brightyellow "\<(try|throw|catch|operator|new|delete)\>"
 color brightyellow "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error)"
