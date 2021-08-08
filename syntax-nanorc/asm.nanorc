@@ -1,14 +1,14 @@
-## Here is an example for assembler.
+## Here is an example for assembler, modofied Aug 2021 unixfreaxjp
 ##
 syntax "asm" "\.(S|s|asm)$"
 color red "\<[A-Z_]{2,}\>"
 color brightcyan "\.(data|subsection|text)"
-color green "\.(align|file|globl|global|hidden|section|size|type|weak)"
+color brightgreen "\.(codesize|filesize|align|file|globl|global|hidden|section|size|type|weak)"
 color brightyellow "\.(ascii|asciz|byte|double|float|hword|int|long|short|single|struct|word)"
 icolor brightred "^[[:space:]]*[.0-9A-Z_]*:"
 color brightcyan "^[[:space:]]*#[[:space:]]*(define|undef|include|ifn?def|endif|elif|else|if|warning|error)"
 ## Highlights assembly syntax unixfreaxjp
-color brightyellow "\<(call|lea|ref|xref|mov|sub|pop|popad|popal|ret|add|sub|cld|xor|and|ror|jmp|jz|jze|jne|jump)\>"
+color brightyellow "\<(load|push|pushad|cmp|test|jnz|loadsb|dec|jecxz|call|lea|ref|xref|mov|sub|pop|popad|popal|ret|add|sub|cld|xor|and|ror|jmp|jz|jze|jne|jump)\>"
 color brightcyan "\<(edi|esi|eax|ebx|ecx|edx|ebp|eip|esp|ax|al|cx|dx|rsi|rdi|rax|rbx|rcx|rdx|rbp|rip|rsp)\>"
 ## Highlight strings (note: VERY resource intensive)
 color brightyellow "<[^= 	]*>" ""(\\.|[^"])*""
