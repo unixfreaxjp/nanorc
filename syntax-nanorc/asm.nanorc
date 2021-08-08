@@ -14,6 +14,7 @@ color brightcyan "\<(edi|esi|eax|ebx|ecx|edx|ebp|eip|esp|ax|al|cx|dx|rsi|rdi|rax
 color brightyellow "<[^= 	]*>" ""(\\.|[^"])*""
 color brightyellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
 ## Highlight comments
+color cyan ";.*"
 color brightblue "//.*"
 color brightblue start="/\*" end="\*/"
 ## Highlight trailing whitespace
